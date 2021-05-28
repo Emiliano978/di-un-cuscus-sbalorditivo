@@ -1,0 +1,7 @@
+**/*.pyc
+**/.*\.py@neomake*\.py
+.hypothesis/
+.mypy_cache/
+.pytest_cache/
+.ropeproject
+.coverage
