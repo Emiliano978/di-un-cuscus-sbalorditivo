@@ -1,0 +1,21 @@
+language: python
+dist: xenial
+sudo: false
+python:
+    - "2.7"
+    - "3.6"
+    - "3.7"
+
+before_install:
+    - wget https://gitlab.matrix.org/matrix-org/olm/-/archive/master/olm-master.tar.bz2
+    - tar -xvf olm-master.tar.bz2
+    - pushd olm-master && make && sudo make PREFIX="/usr" install && popd
+    - rm -r olm-master
+
+install:
+    - pip install -r requirements.txt
+    - pip install pytest
+    - pip install hypothesis
+
+script:
+    python -m pytest
