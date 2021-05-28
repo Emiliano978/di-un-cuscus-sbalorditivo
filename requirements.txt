@@ -1,0 +1,10 @@
+pyOpenSSL
+typing ; python_version < "3.5"
+webcolors
+future
+atomicwrites
+attrs
+logbook
+pygments
+matrix-nio[e2e]>=0.6
+aiohttp
